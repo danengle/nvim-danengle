@@ -12,6 +12,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 opt.wrap = false
+opt.scrolloff = 2
 
 -- search settings
 opt.ignorecase = true

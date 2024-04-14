@@ -70,6 +70,9 @@ return {
 
         opts.desc = "Restart LSP"
         keymap.set("n", "<leader>lsr", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+        opts.desc = "Lsp Info"
+        keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
       end,
     })
 
