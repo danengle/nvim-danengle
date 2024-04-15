@@ -25,12 +25,9 @@ return {
       },
       config = {
         header = vim.split(logo, "\n"),
-        -- ignore_patterns (default: for non-Windows → { "*.git/*", "*/tmp/*", "term://*" }
-        -- ignore_patterns = { "*.git/*", "*/tmp/*", "term://*", "*/node_modules/*" }
-        -- stylua: ignore
         center = {
           { action = telescope_builtin.find_files, desc = " Find File", icon = " ", key = "f" },
-          { action = "Telescope frecency workspace=CWD", desc = " Frecent Files",icon = " ", key = "r" },
+          { action = "Telescope frecency workspace=CWD", desc = " Frecent Files", icon = " ", key = "r" },
           { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
           { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
           { action = "qa", desc = " Quit", icon = " ", key = "q" },
