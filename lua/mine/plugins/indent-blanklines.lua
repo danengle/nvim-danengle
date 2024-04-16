@@ -25,15 +25,14 @@ return {
     -- every time the colorscheme changes
     hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
       local mocha = require("catppuccin.palettes").get_palette("mocha")
-      local text = mocha.text
-      local bg = "#1E2036"
-      local red = colors.blend("#D20F39", bg, 0.6)
-      local yellow = colors.blend("#DF8E1D", bg, 0.6)
-      local blue = colors.blend("#1E66F5", bg, 0.6)
-      local orange = colors.blend("#FE640B", bg, 0.6)
-      local green = colors.blend("#40A02B", bg, 0.6)
-      local violet = colors.blend("#8839EF", bg, 0.6)
-      local cyan = colors.blend("#81C8BE", bg, 0.6)
+      local text = mocha.surface0
+      local red = colors.blend(mocha.red, text, 0.4)
+      local yellow = colors.blend(mocha.yellow, text, 0.4)
+      local blue = colors.blend(mocha.blue, text, 0.4)
+      local orange = colors.blend(mocha.peach, text, 0.4)
+      local green = colors.blend(mocha.green, text, 0.4)
+      local violet = colors.blend(mocha.lavender, text, 0.4)
+      local cyan = colors.blend(mocha.teal, text, 0.4)
       vim.api.nvim_set_hl(0, "RainbowRed", { fg = red })
       vim.api.nvim_set_hl(0, "RainbowYellow", { fg = yellow })
       vim.api.nvim_set_hl(0, "RainbowBlue", { fg = blue })
@@ -41,116 +40,6 @@ return {
       vim.api.nvim_set_hl(0, "RainbowGreen", { fg = green })
       vim.api.nvim_set_hl(0, "RainbowViolet", { fg = violet })
       vim.api.nvim_set_hl(0, "RainbowCyan", { fg = cyan })
-      if true then
-        vim.print("")
-        vim.print("")
-        vim.print("")
-        vim.print("")
-
-        if true then
-          vim.print("")
-          vim.print("")
-          vim.print("")
-          vim.print("")
-          vim.print("")
-          vim.print("")
-          if true then
-            vim.print("")
-            vim.print("")
-            vim.print("")
-            vim.print("")
-            vim.print("")
-            vim.print("")
-            if true then
-              vim.print("")
-              vim.print("")
-              vim.print("")
-              vim.print("")
-              vim.print("")
-              vim.print("")
-              if true then
-                vim.print("")
-                vim.print("")
-                vim.print("")
-                vim.print("")
-                vim.print("")
-                vim.print("")
-                if true then
-                  vim.print("")
-                  vim.print("")
-                  vim.print("")
-                  vim.print("")
-                  vim.print("")
-                  vim.print("")
-                  if true then
-                    vim.print("")
-                    vim.print("")
-                    vim.print("")
-                    vim.print("")
-                    vim.print("")
-                    vim.print("")
-                    if true then
-                      vim.print("")
-                      vim.print("")
-                      vim.print("")
-                      vim.print("")
-                      vim.print("")
-                      vim.print("")
-                      if true then
-                        vim.print("")
-                        vim.print("")
-                        vim.print("")
-                        vim.print("")
-                        vim.print("")
-                        vim.print("")
-                        if true then
-                          vim.print("")
-                          vim.print("")
-                          vim.print("")
-                          vim.print("")
-                          vim.print("")
-                          vim.print("")
-                          if true then
-                            vim.print("")
-                            vim.print("")
-                            vim.print("")
-                            vim.print("")
-                            vim.print("")
-                            vim.print("")
-                            if true then
-                              vim.print("")
-                              vim.print("")
-                              vim.print("")
-                              vim.print("")
-                              vim.print("")
-                              vim.print("")
-                              if true then
-                                vim.print("")
-                                vim.print("")
-                                vim.print("")
-                                vim.print("")
-                                vim.print("")
-                                vim.print("")
-                                local red = colors.blend("#D20F39", bg, 0.6)
-                                local yellow = colors.blend("#DF8E1D", bg, 0.6)
-                                local blue = colors.blend("#1E66F5", bg, 0.6)
-                                local orange = colors.blend("#FE640B", bg, 0.6)
-                                local green = colors.blend("#40A02B", bg, 0.6)
-                                local violet = colors.blend("#8839EF", bg, 0.6)
-                                local cyan = colors.blend("#81C8BE", bg, 0.6)
-                              end
-                            end
-                          end
-                        end
-                      end
-                    end
-                  end
-                end
-              end
-            end
-          end
-        end
-      end
     end)
 
     require("ibl").setup({ indent = { highlight = highlight } })
