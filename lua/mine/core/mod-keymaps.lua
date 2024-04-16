@@ -2,6 +2,28 @@ vim.g.mapleader = " "
 
 local map = vim.keymap
 
+local sections = {
+  f = { desc = " Find" },
+  l = { desc = "󱁤 Language Tools" },
+  u = { desc = " UI/UX" },
+  b = { desc = " Buffers" },
+  d = { desc = " Debugger" },
+  g = { desc = "󰘭 Git" },
+  s = { desc = " Session" },
+  t = { desc = " Terminal" },
+}
+
+-- maps.n["<Leade
+-- maps.n["<Leader>pi"] = {
+--   function()
+--     require("lazy").install()
+--   end,
+--   desc = "Plugins Install",
+-- }
+-- local m = {}
+-- m.n["<leader>f"] = vim.tbl_get(sections, "f")
+-- m.n["<leader>ff"] = { telescope.f }
+
 -- globals
 map.set("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
