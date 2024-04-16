@@ -42,16 +42,16 @@ return {
         keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
         opts.desc = "See available code actions"
-        keymap.set({ "n", "v" }, "<leader>lc", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+        keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
         opts.desc = "Smart rename"
-        keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, opts) -- smart rename
+        keymap.set("n", "<leader>cr", vim.lsp.buf.rename, opts) -- smart rename
 
         opts.desc = "Show buffer diagnostics"
-        keymap.set("n", "<leader>lD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+        keymap.set("n", "<leader>fD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
         opts.desc = "Show line diagnostics"
-        keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts) -- show diagnostics for line
+        keymap.set("n", "<leader>fd", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
         opts.desc = "Go to previous diagnostic"
         keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -63,16 +63,16 @@ return {
         keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
         opts.desc = "Stop LSP"
-        keymap.set("n", "<leader>lss", ":LspStop<CR>", opts) -- mapping to restart lsp if necessary
+        keymap.set("n", "<leader>clt", ":LspStop<CR>", opts) -- mapping to restart lsp if necessary
 
         opts.desc = "Start LSP"
-        keymap.set("n", "<leader>lsg", ":LspStart<CR>", opts) -- mapping to restart lsp if necessary
+        keymap.set("n", "<leader>cls", ":LspStart<CR>", opts) -- mapping to restart lsp if necessary
 
         opts.desc = "Restart LSP"
-        keymap.set("n", "<leader>lsr", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+        keymap.set("n", "<leader>clr", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
         opts.desc = "Lsp Info"
-        keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
+        keymap.set("n", "<leader>ci", "<cmd>LspInfo<cr>", opts)
       end,
     })
 
