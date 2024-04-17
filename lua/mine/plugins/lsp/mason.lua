@@ -31,12 +31,11 @@ return {
         "html",
         "cssls",
         "tailwindcss",
-        "svelte",
         "lua_ls",
         "graphql",
         "emmet_ls",
         "prismals",
-        "pyright",
+        "eslint-lsp",
       },
     })
 
@@ -44,10 +43,6 @@ return {
       ensure_installed = {
         "prettierd", -- prettier formatter
         "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
-        "pylint",
-        "eslint_d",
       },
     })
   end,
