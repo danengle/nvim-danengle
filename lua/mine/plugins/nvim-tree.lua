@@ -44,7 +44,7 @@ return {
       -- },
     })
 
-    local keymap = vim.keymap -- for conciseness
+    local keymap = vim.keymap
 
     keymap.set("n", "<leader>we", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
     keymap.set("n", "<leader>v", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle focus file in tree" }) -- toggle file explorer on current file

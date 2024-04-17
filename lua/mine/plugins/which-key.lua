@@ -21,7 +21,10 @@ return {
     defaults = {
       mode = { "n", "v" },
       ["g"] = { name = "+goto" },
-      ["gs"] = { name = "+surround" },
+      -- this was a copy paste and doesn't do anything
+      -- and there is the surround plugin installed so
+      -- maybet that can get annotated here
+      -- ["gs"] = { name = "+surround" },
       ["z"] = { name = "+fold" },
       ["]"] = { name = "+next" },
       ["["] = { name = "+prev" },
