@@ -42,7 +42,7 @@ return {
     -- TODO: find me
     map.set("n", "<leader>ff", builtin.find_files, { desc = "Fuzzy find files in cwd" })
     map.set("n", "<leader>fo", builtin.oldfiles, { desc = "Fuzzy find recent files" })
-    map.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep for string in cwd" })
+    map.set("n", "<leader>fw", builtin.live_grep, { desc = "Grep for string in cwd" })
     map.set("n", "<leader>fc", builtin.grep_string, { desc = "Find string under cursor in cwd" })
     map.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help info" })
     map.set("n", "<leader>fb", builtin.buffers, { desc = "Find open buffers" })

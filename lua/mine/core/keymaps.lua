@@ -4,7 +4,8 @@ local map = vim.keymap
 
 map.set("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
-map.set("n", "<ESC><ESC>", "<cmd>nohl<CR>", { desc = "Clear search highlights" })
+-- map.set("n", "<ESC><ESC>", "<cmd>nohl<CR>", { desc = "Clear search highlights" })
+map.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 --save file
 map.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })

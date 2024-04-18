@@ -34,11 +34,12 @@ return {
       ["<leader>f"] = { name = " file/find" },
       ["<leader>h"] = { name = "󰘭 git" },
       ["<leader>i"] = { name = "󰛢 grapple" },
-      ["<leader>q"] = { name = "󰩈 quit" },
+      ["<leader>j"] = { name = " flash" },
       ["<leader>s"] = { name = "󰦅 search" },
       ["<leader>u"] = { name = "󰨇 ui" },
       ["<leader>w"] = { name = " windows" },
       ["<leader>x"] = { name = "󱁤 diagnostics/quickfix" },
+      ["<leader>q"] = { name = "󰩈 quit" },
     },
   },
   config = function(_, opts)
