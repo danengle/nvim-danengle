@@ -17,12 +17,6 @@ map.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
 map.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
 map.set("n", "<leader>wq", "<cmd>close<CR>", { desc = "Close current split" })
 
-map.set("n", "<leader>tt", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-map.set("n", "<leader>tw", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-map.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-map.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-map.set("n", "<leader>tb", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
-
 -- better up/down
 map.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map.set({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })

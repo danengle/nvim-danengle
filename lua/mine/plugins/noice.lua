@@ -65,9 +65,7 @@ return {
         --   },
         -- },
       },
-      -- you can enable a preset for easier configuration
       presets = {
-        -- bottom_search = true, -- use a classic bottom cmdline for search
         command_palette = true, -- position the cmdline and popupmenu together
         long_message_to_split = true, -- long messages will be sent to a split
         inc_rename = false, -- enables an input dialog for inc-rename.nvim
@@ -75,6 +73,42 @@ return {
         border = {
           style = "rounded",
           padding = { 4, 6 },
+        },
+      },
+      -- There was some kind of popup/popover that didn't look how I wanted and
+      -- by the time I got back around to attempting to mess with it here, I couldn't
+      -- remember exactly which one it was or how to activate it. I don't fully
+      -- understand all the implications with these changes below because some changes
+      -- affected messages in unexpecte ways while other changes appeared to do nothing.
+      -- Leaving these here for now to remind me to come back to them later.
+      views = {
+        cmdline_popup = {
+          position = {
+            row = 5,
+            col = "50%",
+          },
+          size = {
+            width = 60,
+            height = "auto",
+          },
+        },
+        popupmenu = {
+          relative = "editor",
+          position = {
+            row = 8,
+            col = "50%",
+          },
+          size = {
+            width = 60,
+            height = 10,
+          },
+          border = {
+            style = "rounded",
+            padding = { 2, 2 },
+          },
+          win_options = {
+            winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+          },
         },
       },
       vim.keymap.set("n", "<leader>fn", "<cmd>NoiceTelescope<CR>", { desc = "Find Noice messages" }),
