@@ -29,7 +29,7 @@ return {
       ["]"] = { name = "+next" },
       ["["] = { name = "+prev" },
       ["<leader>t"] = { name = " tabs" },
-      ["<leader>b"] = { name = " buffer" },
+      ["<leader>b"] = { name = " buffers" },
       ["<leader>c"] = { name = " code" },
       ["<leader>f"] = { name = " file/find" },
       ["<leader>h"] = { name = "󰘭 git" },
@@ -39,6 +39,7 @@ return {
       ["<leader>u"] = { name = "󰨇 ui" },
       ["<leader>w"] = { name = " windows" },
       ["<leader>x"] = { name = "󱁤 diagnostics/quickfix" },
+      ["<leader>z"] = { name = "󰺿 telekasten" },
       ["<leader>q"] = { name = "󰩈 quit" },
     },
   },
@@ -48,11 +49,3 @@ return {
     wk.register(opts.defaults)
   end,
 }
---   f = { desc = " Find" },
---   l = { desc = "󱁤 Language Tools" },
---   u = { desc = " UI/UX" },
---   b = { desc = " Buffers" },
---   d = { desc = " Debugger" },
---   g = { desc = "󰘭 Git" },
---   s = { desc = " Session" },
---   t = { desc = " Terminal" },
