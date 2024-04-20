@@ -5,6 +5,7 @@ return {
     "echasnovski/mini.nvim",
   },
   version = "*",
+  lazy = false,
   opts = {
     options = {
       mode = "buffers",
@@ -30,7 +31,7 @@ return {
       },
       color_icons = true,
       separator_style = "thick",
-      diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      diagnostics_indicator = function(count, _, _, _) --  level, diagnostics_dict, context)
         return "(" .. count .. ")"
       end,
     },

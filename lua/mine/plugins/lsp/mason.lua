@@ -32,14 +32,14 @@ return {
         "graphql",
         "emmet_ls",
         "prismals",
-        "eslint-lsp",
-        "prettierd",
       },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
         "stylua", -- lua formatter
+        "prettierd",
+        "eslint-lsp",
       },
     })
   end,
