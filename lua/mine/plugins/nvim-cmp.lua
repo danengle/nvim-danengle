@@ -35,13 +35,14 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
         ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+        ["<C-v>"] = cmp.mapping.scroll_docs(-4),
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-l>"] = cmp.mapping.confirm({ select = false }), -- keep c-(np/jk) (till standardized around here later)
+        -- ["<CR>"] = cmp.mapping.confirm({ select = false }), -- not sure which one I like more yet...prob C-l, less finger movement, but not as "standard"
+        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
       }),
       window = {
         completion = cmp.config.window.bordered(),
