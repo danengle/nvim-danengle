@@ -32,7 +32,7 @@ return {
       color_icons = true,
       separator_style = "thick",
       diagnostics_indicator = function(count, _, _, _) --  level, diagnostics_dict, context)
-        return "(" .. count .. ")"
+        return "(" .. count .. ")"
       end,
     },
   },

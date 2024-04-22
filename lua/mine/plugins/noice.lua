@@ -17,6 +17,7 @@ return {
     require("noice").setup({
       routes = {
         {
+          -- TODO: still have "X lines changed" messages...not sure what event those are
           filter = {
             event = "msg_show",
             any = {
