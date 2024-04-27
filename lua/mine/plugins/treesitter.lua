@@ -37,6 +37,7 @@ return {
           "bash",
           "lua",
           "vim",
+          "vimdoc",
           "gitignore",
           "query",
           "vimdoc",
