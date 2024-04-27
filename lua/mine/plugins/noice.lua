@@ -17,18 +17,28 @@ return {
     require("noice").setup({
       routes = {
         {
-          -- TODO: still have "X lines changed" messages...not sure what event those are
           filter = {
             event = "msg_show",
             any = {
               { find = "%d+L, %d+B" },
-              { find = "; after #%d+" },
-              { find = "; before #%d+" },
             },
           },
           view = "mini",
         },
+        {
+          filter = {
+            event = "msg_show",
+            any = {
+              { find = "; after #%d+" },
+              { find = "; before #%d+" },
+              { find = "more lines" },
+              { find = "fewer lines" },
+            },
+          },
+          opts = { skip = true },
+        },
       },
+
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
