@@ -33,6 +33,7 @@ return {
               { find = "; before #%d+" },
               { find = "more lines" },
               { find = "fewer lines" },
+              { find = "search hit BOTTOM" },
             },
           },
           opts = { skip = true },
