@@ -4,10 +4,11 @@ return {
   config = function()
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-
+    -- local cyberdream = require("lualine.themes.cyberdream")
     lualine.setup({
       options = {
-        theme = "catppuccin",
+        -- theme = "catppuccin",
+        theme = "cyberdream",
       },
       sections = {
         lualine_x = {
