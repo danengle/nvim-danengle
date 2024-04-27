@@ -29,11 +29,36 @@ return {
       config = {
         header = vim.split(neovim_logo1, "\n"),
         center = {
-          { action = telescope_builtin.find_files, desc = " Find File", icon = " ", key = "f" },
-          { action = "Telescope frecency workspace=CWD", desc = " Frecent Files", icon = " ", key = "r" },
-          { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
-          { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
-          { action = "qa", desc = " Quit", icon = " ", key = "q" },
+          {
+            action = telescope_builtin.find_files,
+            desc = " Find File",
+            icon = " ",
+            key = "f",
+          },
+          {
+            action = "Telescope frecency workspace=CWD",
+            desc = " Frecent Files",
+            icon = " ",
+            key = "r",
+          },
+          {
+            action = 'lua require("persistence").load()',
+            desc = " Restore Session",
+            icon = " ",
+            key = "s",
+          },
+          {
+            action = "Lazy",
+            desc = " Lazy",
+            icon = "󰒲 ",
+            key = "l",
+          },
+          {
+            action = "qa",
+            desc = " Quit",
+            icon = "󰩈 ",
+            key = "q",
+          },
         },
         footer = function()
           local stats = require("lazy").stats()

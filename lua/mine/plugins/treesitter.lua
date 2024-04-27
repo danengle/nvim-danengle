@@ -44,6 +44,7 @@ return {
           "ruby",
           "sql",
           "tmux",
+          "regex",
         },
         incremental_selection = {
           enable = true,

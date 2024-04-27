@@ -39,8 +39,8 @@ return {
       ["<leader>w"] = { name = " windows" },
       ["<leader>x"] = { name = "󱁤 diagnostics/quickfix" },
       ["<leader>t"] = { name = " terminal" },
-      ["<leader>z"] = { name = "󰺿 telekasten" },
-      ["<leader>q"] = { name = "󰩈 quit" },
+      ["<leader>k"] = { name = "󰺿 telekasten" },
+      ["<leader>z"] = { name = "󰩈 quit" },
     },
   },
   config = function(_, opts)
