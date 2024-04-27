@@ -20,6 +20,7 @@ return {
             -- Comment = { fg = "#696969", bg = "NONE", italic = true },
 
             -- Complete list can be found in `lua/cyberdream/theme.lua`
+            CursorLine = { bg = "#1d1d20" },
           },
         },
       })

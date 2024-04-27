@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 local map = vim.keymap
 
@@ -9,7 +10,6 @@ map.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 --save file
 map.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
-map.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
 map.set("n", "<leader>zz", "<cmd>qa<cr>", { desc = "Quit All" })
 
 -- splits

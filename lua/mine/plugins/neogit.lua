@@ -6,7 +6,7 @@ return {
     "nvim-telescope/telescope.nvim", -- optional
   },
   keys = {
-    { "<leader>hh", "<cmd>Neogit<CR>", desc = "Open up Neogit" },
+    { "<leader>gn", "<cmd>Neogit<CR>", desc = "Open up Neogit" },
   },
   config = true,
 }

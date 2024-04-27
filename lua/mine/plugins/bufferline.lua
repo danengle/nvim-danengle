@@ -20,7 +20,7 @@ return {
         require("mini.bufremove").delete(n, false)
       end,
       diagnostics = "nvim_lsp",
-      always_show_bufferline = false,
+      always_show_bufferline = true,
       offsets = {
         {
           filetype = "NvimTree",
@@ -30,7 +30,6 @@ return {
         },
       },
       color_icons = true,
-      separator_style = "thick",
       diagnostics_indicator = function(count, _, _, _) --  level, diagnostics_dict, context)
         return "(" .. count .. ")"
       end,
