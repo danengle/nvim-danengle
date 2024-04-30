@@ -39,7 +39,6 @@ return {
       ensure_installed = {
         "stylua", -- lua formatter
         "prettierd",
-        "eslint-lsp",
       },
     })
   end,

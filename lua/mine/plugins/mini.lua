@@ -24,18 +24,23 @@ return {
         end,
         desc = "Delete Buffer",
       },
-      -- stylua: ignore
-      { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
+      {
+        "<leader>bD",
+        function()
+          require("mini.bufremove").delete(0, true)
+        end,
+        desc = "Delete Buffer (Force)",
+      },
     },
   },
+  -- Animate was causing scroll hiccups and I didn't feel like diving
+  -- into what the repo said to do to fix at the time...
+  -- {
+  --   "echasnovski/mini.animate",
+  --   version = false,
+  --   dependencies = {
+  --     "echasnovski/mini.nvim",
+  --   },
+  --   config = true,
+  -- },
 }
--- Animate was causing scroll hiccups and I didn't feel like diving
--- into what the repo said to do to fix at the time...
--- {
---   "echasnovski/mini.animate",
---   version = false,
---   dependencies = {
---     "echasnovski/mini.nvim",
---   },
---   config = true,
--- },

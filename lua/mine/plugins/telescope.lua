@@ -11,15 +11,12 @@ return {
     local telescope = require("telescope")
     local actions = require("telescope.actions")
 
-    -- local trouble_telescope = require("trouble.sources.telescope")
-
     telescope.setup({
       defaults = {
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
             ["<C-j>"] = actions.move_selection_next, -- move to next result
-            -- ["<C-t>"] = trouble_telescope.open(),
           },
         },
         path_display = { "truncate" },
