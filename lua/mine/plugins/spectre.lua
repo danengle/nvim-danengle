@@ -13,8 +13,8 @@ return {
   opts = {
     result_padding = "󰓾",
     highlight = {
-      search = "DiffChange",
-      replace = "DiffAdd",
+      search = "diffRemoved",
+      replace = "Keyword",
     },
   },
 }

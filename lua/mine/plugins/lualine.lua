@@ -7,8 +7,7 @@ return {
     -- local cyberdream = require("lualine.themes.cyberdream")
     lualine.setup({
       options = {
-        -- theme = "catppuccin",
-        theme = "cyberdream",
+        theme = "nightfox",
       },
       sections = {
         lualine_x = {

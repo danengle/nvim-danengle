@@ -1,3 +1,6 @@
+if true then
+  return {}
+end
 -- Never really took notes like this and neorg just didn't want to
 -- work for me. Maybe I'll check it out again when it's more stable,
 -- but for now figured I give this a try.

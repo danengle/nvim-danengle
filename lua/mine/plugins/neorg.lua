@@ -11,7 +11,7 @@ return {
     lazy = false,
     keys = {
       { "<leader>ni", "<cmd>Neorg index<CR>", { desc = "Go to Neorg index", silent = true } },
-      { "<leader>nr", "<cmd>Neorg return<CRj", { desc = "Return from Neorg", silent = true } },
+      { "<leader>nr", "<cmd>Neorg return<CR>", { desc = "Return from Neorg", silent = true } },
     },
     config = function()
       require("neorg").setup({

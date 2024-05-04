@@ -18,7 +18,6 @@ return {
         graphql = { "prettierd" },
         liquid = { "prettierd" },
         lua = { "stylua" },
-        python = { "isort", "black" },
       },
       format_on_save = {
         lsp_fallback = true,
