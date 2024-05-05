@@ -12,7 +12,14 @@ map.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 map.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 map.set("n", "<leader>zz", "<cmd>qa<cr>", { desc = "Quit All" })
 
--- splits
+-- Lazy/Mason/Treesitter
+map.set("n", "<leader>pl", "<cmd>Lazy<cr>", { desc = "Open Lazy" })
+map.set("n", "<leader>pu", "<cmd>Lazy update<cr>", { desc = "Run Lazy update" })
+map.set("n", "<leader>pm", "<cmd>Mason<cr>", { desc = "Open Mason" })
+map.set("n", "<leader>pti", "<cmd>TSInstallInfo<cr>", { desc = "Show installed Treesitter info" })
+map.set("n", "<leader>ptu", "<cmd>TSUpdateSync<cr>", { desc = "Sync installed Treesitter modules" })
+
+-- info splits
 map.set("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" })
 map.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
 map.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
@@ -33,10 +40,10 @@ map.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 map.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 
 -- Resize window using <ctrl> arrow keys
-map.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
-map.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-map.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-map.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+map.set("n", "<A-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+map.set("n", "<A-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+map.set("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+map.set("n", "<A-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
 -- better indenting
 map.set("v", "<", "<gv")

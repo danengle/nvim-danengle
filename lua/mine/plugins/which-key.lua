@@ -25,7 +25,6 @@ return {
       -- and there is the surround plugin installed so
       -- maybet that can get annotated here
       -- ["gs"] = { name = "+surround" },
-      --
       ["z"] = { name = "+fold" },
       ["]"] = { name = "+next" },
       ["["] = { name = "+prev" },
@@ -37,6 +36,7 @@ return {
       ["<leader>j"] = { name = " Flash" },
       ["<leader>m"] = { name = "󱃲 Visual Multi" },
       ["<leader>n"] = { name = " Neorg" },
+      ["<leader>p"] = { name = " Packages" },
       ["<leader>s"] = { name = "󰦅 Search" },
       ["<leader>u"] = { name = "󰨇 Ui/Ux" },
       ["<leader>w"] = { name = " Windows" },
