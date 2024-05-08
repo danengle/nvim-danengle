@@ -28,29 +28,29 @@ return {
           },
           ["core.integrations.treesitter"] = {},
           ["core.integrations.nvim-cmp"] = {},
-          ["core.completion"] = {
-            config = {
-              engine = "nvim-cmp",
-            },
-          },
-          ["core.mode"] = {},
-          ["core.queries.native"] = {},
-          ["core.tempus"] = {},
-          ["core.esupports.hop"] = {},
-          ["core.ui"] = {},
-          ["core.ui.calendar"] = {},
-          ["core.ui.calendar.views.monthly"] = {},
-          ["core.journal"] = {
-            config = {
-              journal_folder = "journal",
-              toc_format = { "yy", "mm", "dd", "link", "title" },
-              workspace = "default",
-            },
-          },
-          ["core.pivot"] = {},
-          ["core.itero"] = {},
-          ["core.promo"] = {},
-          ["core.qol.toc"] = {},
+          -- ["core.completion"] = {
+          --   config = {
+          --     engine = "nvim-cmp",
+          --   },
+          -- },
+          -- ["core.mode"] = {},
+          -- ["core.queries.native"] = {},
+          -- ["core.tempus"] = {},
+          -- ["core.esupports.hop"] = {},
+          -- ["core.ui"] = {},
+          -- ["core.ui.calendar"] = {},
+          -- ["core.ui.calendar.views.monthly"] = {},
+          -- ["core.journal"] = {
+          --   config = {
+          --     journal_folder = "journal",
+          --     toc_format = { "yy", "mm", "dd", "link", "title" },
+          --     workspace = "default",
+          --   },
+          -- },
+          -- ["core.pivot"] = {},
+          -- ["core.itero"] = {},
+          -- ["core.promo"] = {},
+          -- ["core.qol.toc"] = {},
         },
       })
       vim.wo.foldlevel = 99
