@@ -25,26 +25,10 @@ return {
       vim.g.VM_maps["Motion ,"] = ",,"
       vim.g.VM_default_mappings = 0
       vim.g.VM_add_cursor_at_pos_no_mappings = 1
-      -- The attempted updates don't map to lua for a reason I don't know
-      -- off the top of my head to adapt to. The originals are easy enough though
-      -- so leaving this here for now as a little reminder
-      -- vim.g.VM_custom_remaps = {
-      --   '<c-p>': '[', -- go to previous highlighted/marked word
-      --   '<c-s>': 'q' -- after C-n to next word, press q to unselect it from change
-      -- }
+      vim.api.nvim_set_hl(0, "VM_Mono", { fg = "#131a24", bg = "#9d79d6" })
+      vim.api.nvim_set_hl(0, "VM_Cursor", { fg = "#131a24", bg = "#c94f6d" })
+      vim.api.nvim_set_hl(0, "VM_Extend", { fg = "#131a24", bg = "#63cdcf" })
+      vim.api.nvim_set_hl(0, "VM_Insert", { fg = "#131a24", bg = "#dbc074" })
     end,
   },
 }
--- Changed the highlights in the plugin itself since it's vimscript
--- and there was a clearly documented place to make any mods here myself
--- Dropping these here for when I inivitable need to remind myself which
--- ones I chose...
--- " hi default link VM_Mono ErrorMsg
--- " hi default link VM_Cursor Visual
--- " hi default link VM_Extend PmenuSel
--- " hi default link VM_Insert DiffChange
--- hi default link VM_Mono MiniStatuslineModeInsert
--- hi default link VM_Cursor MiniStatuslineModeNormal
--- hi default link VM_Extend MiniStatuslineModeVisual
--- hi default link VM_Insert MiniStatuslineModeOther
--- hi link MultiCursor VM_Cursor
