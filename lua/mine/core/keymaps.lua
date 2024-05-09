@@ -25,6 +25,15 @@ map.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
 map.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
 map.set("n", "<leader>wq", "<cmd>close<CR>", { desc = "Close current split" })
 
+map.set("n", "<leader>tp", "<cmd>tabp<cr>", { desc = "Previous tab" })
+map.set("n", "<leader>tn", "<cmd>tabn<cr>", { desc = "Next tab" })
+map.set("n", "<leader>ti", "<cmd>tabnew<cr>", { desc = "New tab" })
+map.set("n", "<leader>ts", "<cmd>tab split<cr>", { desc = "Split current buffer into new tab" })
+map.set("n", "<leader>tq", "<cmd>tabclose<cr>", { desc = "Close current tab page" })
+map.set("n", "<leader>tP", "<cmd>tabonly<cr>", { desc = "Close all tabs except the current one" })
+map.set("n", "<leader>th", "<cmd>-tabmove<cr>", { desc = "Move tab page left" })
+map.set("n", "<leader>tl", "<cmd>+tabmove<cr>", { desc = "Move tab page right" })
+
 -- better up/down
 map.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map.set({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -48,9 +57,6 @@ map.set("n", "<A-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Wind
 -- better indenting
 map.set("v", "<", "<gv")
 map.set("v", ">", ">gv")
-
--- map("n", "<leader>uF", function() LazyVim.format.toggle(true) end, { desc = "Toggle Auto Format (Buffer)" })
--- map("n", "<leader>us", function() LazyVim.toggle("spell") end, { desc = "Toggle Spelling" })
 
 -- From LazyVim...mostly. Bug when toggling relative numbers when numbers are
 -- hidden. Subsequent relative toggle hides numbers, not toggle relative.

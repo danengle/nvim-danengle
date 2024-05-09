@@ -35,6 +35,12 @@ return {
             key = "f",
           },
           {
+            action = "Neotree float filesystem",
+            desc = " Explore Files",
+            icon = " ",
+            key = "e",
+          },
+          {
             action = "Telescope frecency workspace=CWD",
             desc = " Frecent Files",
             icon = " ",
