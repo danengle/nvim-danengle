@@ -28,9 +28,9 @@ return {
 
     vim.keymap.set({ "n", "v" }, "<leader>cf", function()
       conform.format({
-        lsp_fallback = true,
+        lsp_fallback = false,
         async = false,
-        timeout_ms = 1000,
+        timeout_ms = 2000,
       })
     end, { desc = "Format file or range" })
   end,

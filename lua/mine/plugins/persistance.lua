@@ -4,6 +4,10 @@ return {
   opts = {
     -- add any custom options here
     "globals",
+    "buffers",
+    "curdir",
+    "winsize",
+    "tabpages",
   },
   pre_save = function()
     vim.api.nvim_exec_autocmds("User", { pattern = "SessionSavePre" })

@@ -15,6 +15,8 @@ return {
       { "<leader>bf", "<cmd>BufferPick<cr>", desc = "Pick a buffer" },
       { "<leader>bn", "<Cmd>BufferNext<CR>", desc = "Next buffer" },
       { "<leader>bp", "<Cmd>BufferPrevious<CR>", desc = "Previous buffer" },
+      { "]b", "<Cmd>BufferNext<CR>", desc = "Next buffer" },
+      { "[b", "<Cmd>BufferPrevious<CR>", desc = "Previous buffer" },
     },
     config = function()
       local barbar = require("barbar")

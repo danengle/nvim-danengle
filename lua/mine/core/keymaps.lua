@@ -25,9 +25,12 @@ map.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" })
 map.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
 map.set("n", "<leader>wq", "<cmd>close<CR>", { desc = "Close current split" })
 
+-- TODO: find a better key for todo to map to so tabs can map to 't'...
+map.set("n", "[t", "<cmd>tabp<cr>", { desc = "Previous tab" })
+map.set("n", "]t", "<cmd>tabn<cr>", { desc = "Next tab" })
 map.set("n", "<leader>tp", "<cmd>tabp<cr>", { desc = "Previous tab" })
 map.set("n", "<leader>tn", "<cmd>tabn<cr>", { desc = "Next tab" })
-map.set("n", "<leader>ti", "<cmd>tabnew<cr>", { desc = "New tab" })
+map.set("n", "<leader>tt", "<cmd>tabnew<cr>", { desc = "New tab" })
 map.set("n", "<leader>ts", "<cmd>tab split<cr>", { desc = "Split current buffer into new tab" })
 map.set("n", "<leader>tq", "<cmd>tabclose<cr>", { desc = "Close current tab page" })
 map.set("n", "<leader>tP", "<cmd>tabonly<cr>", { desc = "Close all tabs except the current one" })

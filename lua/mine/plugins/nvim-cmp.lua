@@ -40,8 +40,8 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-v>"] = cmp.mapping.scroll_docs(-4),
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-        ["<C-l>"] = cmp.mapping.confirm({ select = false }), -- keep c-(np/jk) (till standardized around here later)
-        -- ["<CR>"] = cmp.mapping.confirm({ select = false }), -- not sure which one I like more yet...prob C-l, less finger movement, but not as "standard"
+        ["<C-l>"] = cmp.mapping.confirm({ select = true }), -- keep c-(np/jk) (till standardized around here later)
+        -- ["<CR>"] = cmp.mapping.confirm({ select = true }), -- not sure which one I like more yet...prob C-l, less finger movement, but not as "standard"
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
       }),
       window = {
@@ -50,8 +50,8 @@ return {
       },
       -- sources for autocompletion
       sources = cmp.config.sources({
-        { name = "nvim_lsp" },
         { name = "luasnip" }, -- snippets
+        { name = "nvim_lsp" },
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
         { name = "neorg" }, -- neorg completions
