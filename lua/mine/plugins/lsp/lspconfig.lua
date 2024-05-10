@@ -25,7 +25,6 @@ return {
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         local opts = { buffer = ev.buf, silent = true }
 
-        -- set keybinds
         opts.desc = "Show LSP references"
         keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
@@ -61,6 +60,9 @@ return {
 
         opts.desc = "Show documentation for what is under cursor"
         keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
+        opts.desc = "Show signature"
+        keymap.set("n", "<leader>ch", vim.lsp.buf.signature_help, opts) -- show method signature if any
 
         opts.desc = "Stop LSP"
         keymap.set("n", "<leader>clt", ":LspStop<CR>", opts) -- mapping to restart lsp if necessary

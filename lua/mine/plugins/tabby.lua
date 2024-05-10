@@ -11,13 +11,14 @@ return {
           local tab_name = vim.fn.input("Rename this tab: ")
           if not tab_name or tab_name == "" then
             local notify = require("notify")
-            notify("Unable to rename tab with blank input", vim.log.levels.ERROR, { title = "Tabby:" })
+            notify("Unable to rename tab with blank input", vim.log.levels.WARN, { title = "Tabby:" })
           else
             tabby.tab_rename(tab_name)
           end
         end,
         desc = "Rename current tab",
       },
+      { "<leader>tf", "<cmd>Tabby pick_window<cr>", desc = "Pick a window" },
     },
     config = function()
       require("tabby.tabline").use_preset("active_wins_at_tail", {
@@ -32,12 +33,12 @@ return {
         nerdfont = true, -- whether use nerdfont
         lualine_theme = "nightfox", -- lualine theme name
         tab_name = {
-          name_fallback = function(tabid)
-            return tabid
+          name_fallback = function(_) -- tabid
+            return ""
           end,
         },
         buf_name = {
-          mode = "'unique'|'relative'|'tail'|'shorten'",
+          mode = "tail", --"'unique'|'relative'|'tail'|'shorten'",
         },
       })
     end,
