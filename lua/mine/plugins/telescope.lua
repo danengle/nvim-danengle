@@ -47,6 +47,7 @@ return {
       map.set("n", "<leader>fz", builtin.current_buffer_fuzzy_find, { desc = "Find current buffer fuzzy" })
       map.set("n", "<leader>fc", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
       map.set("n", "<leader>ut", builtin.colorscheme, { desc = "Browse colorschemes" })
+      map.set("n", "<leader>fl", builtin.highlights, { desc = "Browse highlight values" })
     end,
   },
   {

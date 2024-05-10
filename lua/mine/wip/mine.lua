@@ -1,20 +1,28 @@
 require("tabby").setup()
 
-local filename = require("tabby.filename")
-local util = require("tabby.util")
+local palette = require("nightfox.palette").load("nightfox")
+local Color = require("nightfox.lib.color")
 
-local api = require("tabby.module.api")
+local bg = Color.from_hex(palette.bg1)
+local red = Color.from_hex("#ff0000")
 
-local function tab_name(tab)
-  return string.gsub(tab, "%[..%]", "")
-end
+-- Blend the bg with red. The blend factor is from 0 to 1
+-- with 0 being full bg and 1 being full red
+local red_bg = bg:blend(red, 0.2)
 
--- local function buffer_name(buf)
---   if string.find(buf, "NvimTree") then
---     return "NvimTree"
---   end
---   return buf
--- end
+print(red_bg:to_css())
+-- "#471c26"
+
+-- Brighten bg by adding 10 to the value of the color as a hsv
+local alt_bg = bg:brighten(10)
+print(vim.inspect(alt_bg:to_hsv()))
+-- {
+--   hue = 213.91304347826,
+--   saturation = 47.916666666667,
+--   value = 28.823529411765
+-- }
+
+-- fg = Color.from_hex(pallete.)
 
 local theme = {
   fill = "TabFill",
