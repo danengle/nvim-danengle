@@ -21,6 +21,7 @@ return {
       { "<leader>tf", "<cmd>Tabby pick_window<cr>", desc = "Pick a window" },
     },
     config = function()
+      vim.o.showtabline = 2
       local tab_name = require("tabby.feature.tab_name")
       local default_options = {
         name_fallback = function(_) -- tabid
@@ -28,53 +29,37 @@ return {
         end,
       }
       tab_name.set_default_option(default_options)
-      local palette = require("nightfox.palette").load("nightfox")
-      local Color = require("nightfox.lib.color")
 
-      local dark = Color.from_hex(palette.bg1)
-      local light = Color.from_hex(palette.fg1)
-      local light0 = Color.from_hex(palette.fg0)
-      local fill = Color.from_hex(palette.bg0)
-      local green = Color.from_hex(palette.green.base)
-      local blue = Color.from_hex(palette.blue.base)
+      local function format_warn_win(win)
+        local redish = "%#PlaygroundBlueBase1Warn01#"
+        local norm = "%#PlaygroundBlueBase1#"
+        if win.buf().is_changed() then
+          return string.format("%s%s%s", redish, "", norm)
+        else
+          return ""
+        end
+      end
 
-      local bd1 = dark:blend(blue, 0.1)
-      local bd2 = dark:blend(blue, 0.2)
-      local bd3 = dark:blend(blue, 0.9)
-      local bl1 = light:blend(blue, 0.1)
-
-      local gd1 = dark:blend(green, 0.1)
-      local gd2 = dark:blend(green, 0.3)
-      local gd3 = dark:blend(green, 0.9)
-      local gl1 = light:blend(green, 0.1)
-
-      local tab1 = { fg = bl1:to_css(), bg = bd1:to_css() }
-      local tab2 = { fg = bl1:to_css(), bg = bd2:to_css() }
-      local tab3 = { fg = fill:to_css(), bg = bd3:to_css(), style = "bold" }
-      local tab4 = { fg = fill:to_css(), bg = bd3:to_css(), style = "bold" }
-
-      local tab5 = { fg = light0:to_css(), bg = gd2:to_css(), style = "bold" }
+      local function format_active_win(win)
+        local green1 = "%#PlaygroundBlueBase1Success00#"
+        local norm = "%#PlaygroundBlueBase1#"
+        if win.is_current() then
+          return string.format("%s%s%s", green1, "", norm)
+        else
+          return ""
+        end
+      end
 
       require("tabby.tabline").set(function(line)
         local theme = {
-          fill = fill,
-          head = tab1,
-          current_tab = tab5,
-          tab = tab2,
-          win = tab2,
-          tail = tab1,
+          fill = "PlaygroundFill",
+          head = "PlaygroundBlueBase",
+          current_tab = "PlaygroundGreenBaseSel",
+          tab = "PlaygroundBlueBase1",
+          win = "PlaygroundBlueBase1",
+          tail = "PlaygroundFill",
         }
 
-        -- local theme = {
-        --   fill = "TabLineFill",
-        --   -- Also you can do this: fill = { fg='#f2e9de', bg='#907aa9', style='italic' }
-        --   head = "TabLine",
-        --   current_tab = { fg = "#F8FBF6", bg = "#896a98", style = "bold" },
-        --   -- current_tab = "TabLineSel",
-        --   tab = "TabLine",
-        --   win = "TabLine",
-        --   tail = "TabLine",
-        -- }
         return {
           {
             { "  ", hl = theme.head },
@@ -96,9 +81,10 @@ return {
           line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
             return {
               line.sep("", theme.win, theme.fill),
-              win.is_current() and "" or "",
+              format_active_win(win),
               win.buf_name(),
-              win.buf().is_changed() and "" or "",
+              win.file_icon(),
+              format_warn_win(win),
               line.sep("", theme.win, theme.fill),
               hl = theme.win,
               margin = " ",

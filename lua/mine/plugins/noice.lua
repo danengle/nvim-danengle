@@ -34,6 +34,8 @@ return {
               { find = "more lines" },
               { find = "fewer lines" },
               { find = "search hit BOTTOM" },
+              { find = "pick_window" },
+              { find = "fargs" },
             },
           },
           opts = { skip = true },

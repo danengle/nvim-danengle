@@ -103,3 +103,9 @@ map.set("n", "<leader>uw", function()
     notify("Wrapping words on", vim.log.levels.INFO, { title = "Option:" })
   end
 end, { desc = "Toggle word wrap" })
+
+map.set("n", "<leader>wp", function()
+  local notify = require("notify")
+  local path = vim.api.nvim_buf_get_name(0)
+  notify("Current path: " .. path, vim.log.levels.INFO)
+end, { desc = "Notify current buffer path" })
