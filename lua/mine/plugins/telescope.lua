@@ -42,6 +42,7 @@ return {
       map.set("n", "<leader>fw", builtin.live_grep, { desc = "Grep for string in cwd" })
       map.set("n", "<leader>fW", builtin.grep_string, { desc = "Find string under cursor in cwd" })
       map.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help info" })
+      map.set("n", "<leader>fH", builtin.command_history, { desc = "Find from command history" })
       map.set("n", "<leader>fb", builtin.buffers, { desc = "Find open buffers" })
       map.set("n", "<leader>fg", builtin.registers, { desc = "Find current registers" })
       map.set("n", "<leader>fz", builtin.current_buffer_fuzzy_find, { desc = "Find current buffer fuzzy" })

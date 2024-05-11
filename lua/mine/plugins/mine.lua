@@ -4,5 +4,8 @@ return {
   dependencies = {
     "EdenEast/nightfox.nvim",
   },
-  config = true,
+  config = function()
+    local playground = require("playground")
+    playground.setup({})
+  end,
 }
