@@ -31,6 +31,21 @@ return {
         end,
         desc = "Delete Buffer (Force)",
       },
+      {
+        "<leader>bQ",
+        function()
+          local bufrem = require("mini.bufremove")
+          local notify = require("notify")
+          local current = vim.api.nvim_get_current_buf()
+          for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+            if vim.api.nvim_buf_is_loaded(bufnr) and current ~= bufnr then
+              notify("Closing buffer " .. bufnr, vim.log.levels.INFO)
+              bufrem.delete(bufnr)
+            end
+          end
+        end,
+        desc = "Close all (as many as able) buffers but not current",
+      },
     },
   },
   -- Animate was causing scroll hiccups and I didn't feel like diving
