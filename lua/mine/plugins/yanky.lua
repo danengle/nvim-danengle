@@ -1,0 +1,48 @@
+return {
+  "gbprod/yanky.nvim",
+  keys = {
+    { "y", "<Plug>(YankyYank)", mode = { "n", "x" } },
+    { "p", "<Plug>(YankyPutAfter)", mode = { "n", "x" } },
+    { "P", "<Plug>(YankyPutBefore)", mode = { "n", "x" } },
+    { "gp", "<Plug>(YankyGPutAfter)", mode = { "n", "x" } },
+    { "gP", "<Plug>(YankyGPutBefore)", mode = { "n", "x" } },
+    { "<c-f>", "<Plug>(YankyPreviousEntry)", mode = "x" },
+    { "<c-v>", "<Plug>(YankyNextEntry)", mode = "x" },
+    { "<leader>fy", "<cmd>Telescope yank_history<cr>", desc = "Yanky history" },
+  },
+  config = function()
+    require("telescope").load_extension("yank_history")
+    require("yanky").setup({
+      ring = {
+        history_length = 100,
+        storage = "shada",
+        sync_with_numbered_registers = true,
+        cancel_event = "update",
+        ignore_registers = { "_" },
+        update_register_on_cycle = false,
+      },
+      preserve_cursor_position = {
+        enabled = true,
+      },
+      system_clipboard = {
+        sync_with_ring = true,
+      },
+      highlight = {
+        -- already have a yank highlighter
+        on_put = true,
+        on_yank = true,
+        -- timer = 500,
+      },
+      picker = {
+        select = {
+          action = nil, -- nil to use default put action
+        },
+        telescope = {
+          use_default_mappings = true, -- if default mappings should be used
+          mappings = nil, -- nil to use default mappings or no mappings (see `use_default_mappings`)
+        },
+      },
+    })
+    -- YankyPut
+  end,
+}
