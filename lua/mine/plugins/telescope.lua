@@ -49,6 +49,7 @@ return {
       map.set("n", "<leader>fc", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
       map.set("n", "<leader>ut", builtin.colorscheme, { desc = "Browse colorschemes" })
       map.set("n", "<leader>fl", builtin.highlights, { desc = "Browse highlight values" })
+      map.set("n", "<leader>fk", builtin.keymaps, { desc = "Browse normal mode keymaps" })
     end,
   },
   {

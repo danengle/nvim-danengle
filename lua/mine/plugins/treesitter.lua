@@ -21,6 +21,10 @@ return {
         autotag = {
           enable = true,
         },
+        sync_install = false,
+        ignore_install = {},
+        auto_install = true,
+        textobjects = { enable = true },
         -- ensure these language parsers are installed
         ensure_installed = {
           "json",
@@ -65,5 +69,12 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     config = true,
+    keys = {
+      {
+        "<leader>uc",
+        "<cmd>TSContextToggle<cr>",
+        desc = "Toggle treesitter Context",
+      },
+    },
   },
 }

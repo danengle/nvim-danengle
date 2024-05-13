@@ -41,12 +41,22 @@ return {
       end
 
       local function format_active_win(win)
-        local green1 = "%#PlaygroundBlueBase1Success00#"
+        local green1 = "%#PlaygroundBlueBase1Success01#"
         local norm = "%#PlaygroundBlueBase1#"
         if win.is_current() then
           return string.format("%s%s%s", green1, "", norm)
         else
           return ""
+        end
+      end
+
+      local function win_name(win)
+        if win.is_current() then
+          local hl = "%#PlaygroundBlueBase1Sel#"
+          local norm = "%#PlaygroundBlueBase1#"
+          return string.format("%s%s%s", hl, win.buf_name(), norm)
+        else
+          return win.buf_name()
         end
       end
 
@@ -57,8 +67,14 @@ return {
           current_tab = "PlaygroundGreenBaseSel",
           tab = "PlaygroundBlueBase1",
           win = "PlaygroundBlueBase1",
-          tail = "PlaygroundFill",
+          current_win = "PlaygroundBlueBase1Sel",
+          tail = "PlaygroundBlueBase",
         }
+
+        -- TODO: make this work. If neo=tree opens in sidebar, window tab shows
+        local function no_neotree(win)
+          return not string.match(win.buf_name(), "neo-tree")
+        end
 
         return {
           {
@@ -79,10 +95,12 @@ return {
           end),
           line.spacer(),
           line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
+            local hl = win.is_current() and theme.current_win or theme.win
             return {
               line.sep("", theme.win, theme.fill),
               format_active_win(win),
-              win.buf_name(),
+              win_name(win),
+              -- win.buf_name(),
               win.file_icon(),
               format_warn_win(win),
               line.sep("", theme.win, theme.fill),
