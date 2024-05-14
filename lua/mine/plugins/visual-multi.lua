@@ -25,10 +25,6 @@ return {
       vim.g.VM_maps["Motion ,"] = ",,"
       vim.g.VM_default_mappings = 0
       vim.g.VM_add_cursor_at_pos_no_mappings = 1
-      vim.api.nvim_set_hl(0, "VM_Mono", { fg = "#131a24", bg = "#9d79d6" })
-      vim.api.nvim_set_hl(0, "VM_Cursor", { link = "PlaygroundSearchCursor" })
-      vim.api.nvim_set_hl(0, "VM_Extend", { link = "PlaygroundSearchMatch" })
-      vim.api.nvim_set_hl(0, "VM_Insert", { fg = "#131a24", bg = "#dbc074" })
     end,
   },
 }

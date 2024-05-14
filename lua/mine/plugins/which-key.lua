@@ -30,6 +30,7 @@ return {
       ["["] = { name = "+prev" },
       ["<leader>b"] = { name = " Buffers" },
       ["<leader>c"] = { name = " Code" },
+      ["<leader>e"] = { name = " Explorer" },
       ["<leader>f"] = { name = " File/Find" },
       ["<leader>g"] = { name = "󰘭 Git" },
       ["<leader>i"] = { name = "󰛢 Grapple" },

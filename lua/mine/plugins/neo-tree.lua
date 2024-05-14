@@ -9,10 +9,18 @@ return {
       "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
     keys = {
-      { "<leader>er", "<cmd>Neotree reveal<cr>", { desc = { "Neotree reveal" } } },
-      { "<leader>ef", "<cmd>Neotree float filesystem<cr>", { desc = { "Neotree floating" } } },
-      { "<leader>eo", "<cmd>Neotree open<cr>", { desc = { "Neotree open" } } },
-      { "<leader>ec", "<cmd>Neotree close<cr>", { desc = { "Neotree close" } } },
+      {
+        "<leader>er",
+        "<cmd>Neotree reveal position=float<cr>",
+        desc = "Open floating Neotree at current location",
+      },
+      {
+        "<leader>el",
+        "<cmd>Neotree source=filesystem reveal=true position=left<cr>",
+        desc = "Open Neotree on left side",
+      },
+      { "<leader>ef", "<cmd>Neotree float filesystem<cr>", desc = "Open floating Neotree at CWD" },
+      { "<leader>ec", "<cmd>Neotree close<cr>", desc = "Close Neotree" },
     },
     config = function()
       vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
@@ -28,8 +36,8 @@ return {
         },
         default_component_configs = {
           icon = {
-            folder_closed = "󰉖",
-            folder_open = "󰷏",
+            folder_closed = "",
+            folder_open = "",
             folder_empty = "󱧋",
           },
         },

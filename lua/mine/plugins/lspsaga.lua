@@ -14,9 +14,25 @@ return {
       left_width = 0.25,
       max_height = 0.75,
     },
+    ui = {
+      code_action = nil,
+    },
   },
   config = true,
-  --   function()
-  --   require("lspsaga").setup({})
-  -- end,
 }
+--   function()
+--   require("lspsaga").setup({})
+-- end,
+-- ui = {
+--   border = 'rounded',
+--   devicon = true,
+--   foldericon = true,
+--   title = true,
+--   expand = '⊞',
+--   collapse = '⊟',
+--   code_action = '💡',
+--   actionfix = ' ',
+--   lines = { '┗', '┣', '┃', '━', '┏' },
+--   kind = nil,
+--   imp_sign = '󰳛 ',
+-- },

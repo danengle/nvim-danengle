@@ -38,14 +38,14 @@ local function augroup(name)
   return vim.api.nvim_create_augroup("mine_" .. name, { clear = true })
 end
 
--- Highlight on yank
-vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = augroup("highlight_yank"),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
+-- Highlight on yank - disable for now because yanky took it over
+-- vim.api.nvim_create_autocmd("TextYankPost", {
+--   desc = "Highlight when yanking (copying) text",
+--   group = augroup("highlight_yank"),
+--   callback = function()
+--     vim.highlight.on_yank()
+--   end,
+-- })
 
 -- go to last loc when opening a buffer
 vim.api.nvim_create_autocmd("BufReadPost", {

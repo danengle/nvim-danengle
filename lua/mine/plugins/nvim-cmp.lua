@@ -42,7 +42,7 @@ return {
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
         ["<C-l>"] = cmp.mapping.confirm({ select = true }), -- keep c-(np/jk) (till standardized around here later)
         -- ["<CR>"] = cmp.mapping.confirm({ select = true }), -- not sure which one I like more yet...prob C-l, less finger movement, but not as "standard"
-        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+        ["<C-'>"] = cmp.mapping.complete(), -- show completion suggestions
       }),
       window = {
         completion = cmp.config.window.bordered(),
