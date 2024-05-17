@@ -139,6 +139,7 @@ return {
         },
       },
       vim.keymap.set("n", "<leader>fn", "<cmd>NoiceTelescope<CR>", { desc = "Find Noice messages" }),
+      vim.keymap.set("n", "<leader>fm", "<cmd>NoiceAll<CR>", { desc = "Find all Noice messages, qf" }),
     })
   end,
 }

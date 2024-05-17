@@ -43,7 +43,7 @@ return {
       ["<leader>w"] = { name = " Windows" },
       ["<leader>x"] = { name = "󱁤 Diagnostics/Quickfix" },
       ["<leader>t"] = { name = "󱋤 Tabs" },
-      ["<leader>k"] = { name = "󰺿 Telekasten" },
+      ["<leader>k"] = { name = "󱋤 Go tab  or " },
       ["<leader>z"] = { name = "󰩈 Quit" },
     },
   },
