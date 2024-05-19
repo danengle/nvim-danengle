@@ -68,7 +68,8 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
-    config = true,
+    config = {},
+    lazy = false,
     keys = {
       {
         "<leader>uc",

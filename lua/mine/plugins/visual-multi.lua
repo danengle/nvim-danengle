@@ -2,12 +2,12 @@ return {
   {
     "mg979/vim-visual-multi",
     keys = {
-      { "<leader>ma", "<Plug>(VM-Select-All)<Tab>", desc = "Select All" },
-      { "<leader>mr", "<Plug>(VM-Start-Regex-Search)", desc = "Start regex search" },
-      { "<leader>mp", "<Plug>(VM-Add-Cursor-At-Pos)", desc = "Add cursor at position" },
-      { "<leader>mo", "<Plug>(VM-Toggle-Mappings)", desc = "Toggle mapping" },
+      { "<leader>va", "<Plug>(VM-Select-All)<Tab>", desc = "Select All" },
+      { "<leader>vr", "<Plug>(VM-Start-Regex-Search)", desc = "Start regex search" },
+      { "<leader>vp", "<Plug>(VM-Add-Cursor-At-Pos)", desc = "Add cursor at position" },
+      { "<leader>vo", "<Plug>(VM-Toggle-Mappings)", desc = "Toggle mapping" },
       {
-        "<leader>mv",
+        "<leader>vv",
         function()
           vim.cmd('silent! execute "normal! \\<Plug>(VM-Visual-Cursors)"')
           vim.cmd("sleep 200m")
