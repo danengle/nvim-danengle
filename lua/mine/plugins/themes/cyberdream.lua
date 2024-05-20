@@ -24,7 +24,7 @@ return {
           },
         },
       })
-      -- vim.cmd("colorscheme cyberdream") -- set the colorscheme
+      vim.cmd("colorscheme cyberdream") -- set the colorscheme
     end,
   },
 }
