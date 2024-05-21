@@ -34,7 +34,7 @@ return {
         local redish = "%#PlaygroundBlueBase1Warn01#"
         local norm = "%#PlaygroundBlueBase1#"
         if win.buf().is_changed() then
-          return string.format("%s%s%s", redish, "", norm)
+          return string.format("%s%s%s", redish, " ", norm)
         else
           return ""
         end
@@ -54,9 +54,9 @@ return {
         if win.is_current() then
           local hl = "%#PlaygroundBlueBase1Sel#"
           local norm = "%#PlaygroundBlueBase1#"
-          return string.format("%s%s%s", hl, win.buf_name(), norm)
+          return " " .. string.format("%s%s%s", hl, win.buf_name(), norm) .. " "
         else
-          return win.buf_name()
+          return " " .. win.buf_name() .. " "
         end
       end
 
@@ -105,7 +105,8 @@ return {
               format_warn_win(win),
               line.sep("", theme.win, theme.fill),
               hl = theme.win,
-              margin = " ",
+              -- margin = " ",
+              margin = "",
             }
           end),
           {

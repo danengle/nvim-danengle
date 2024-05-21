@@ -7,8 +7,9 @@ return {
     -- local cyberdream = require("lualine.themes.cyberdream")
     lualine.setup({
       options = {
-        -- theme = "nightfox",
-        theme = "cyberdream",
+        theme = "nightfox",
+        -- theme = "cyberdream",
+        -- theme = "tokyonight",
       },
       sections = {
         lualine_x = {
@@ -17,8 +18,6 @@ return {
             cond = lazy_status.has_updates,
             color = { fg = "#ff9e64" },
           },
-          { "encoding" },
-          { "fileformat" },
           { "filetype" },
         },
       },
