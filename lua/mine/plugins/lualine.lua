@@ -10,6 +10,7 @@ return {
         theme = "nightfox",
         -- theme = "cyberdream",
         -- theme = "tokyonight",
+        -- theme = "catppuccin",
       },
       sections = {
         lualine_x = {

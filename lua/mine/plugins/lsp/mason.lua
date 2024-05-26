@@ -4,6 +4,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
+  priority = 150,
   config = function()
     local mason = require("mason")
 
@@ -29,6 +30,7 @@ return {
         "cssls",
         "tailwindcss",
         "lua_ls",
+        "sqlls",
       },
     })
 

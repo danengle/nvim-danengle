@@ -6,6 +6,7 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "folke/neodev.nvim", opts = {} },
   },
+  priority = 200,
   config = function()
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
@@ -126,6 +127,17 @@ return {
             },
           },
         })
+      end,
+      ["sqlls"] = function()
+        lspconfig["sqlls"].setup({
+          capabilities = capabilities,
+          cmd = { "sql-language-server", "up", "--method", "stdio" },
+          filetypes = { "sql" },
+          root_dir = require("lspconfig").util.root_pattern("sql-language-server"),
+        })
+        -- settings = {
+        -- filetypes = {"sql", "mysql"},
+        -- root_dir = function() return vim.loop.cwd() end,
       end,
     })
   end,

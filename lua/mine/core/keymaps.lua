@@ -10,6 +10,8 @@ map.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 --save file
 map.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+map.set({ "i", "x", "n", "s" }, "<M-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+
 map.set("n", "<leader>zz", "<cmd>qa<cr>", { desc = "Quit All" })
 
 -- Lazy/Mason/Treesitter
