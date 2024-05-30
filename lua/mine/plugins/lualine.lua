@@ -8,6 +8,7 @@ return {
     lualine.setup({
       options = {
         theme = "nightfox",
+        -- theme = require("neofusion.lualine"),
         -- theme = "cyberdream",
         -- theme = "tokyonight",
         -- theme = "catppuccin",
