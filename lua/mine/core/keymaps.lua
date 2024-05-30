@@ -3,6 +3,10 @@ vim.g.maplocalleader = ","
 
 local map = vim.keymap
 
+-- Switch back to "natural" horizontal scrolling...not sure where it got reset
+map.set("n", "<ScrollWheelLeft>", "<ScrollWheelRight>", { noremap = true, silent = true })
+map.set("n", "<ScrollWheelRight>", "<ScrollWheelLeft>", { noremap = true, silent = true })
+
 map.set("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
 -- map.set("n", "<ESC><ESC>", "<cmd>nohl<CR>", { desc = "Clear search highlights" })
